@@ -3,5 +3,8 @@ public class Driver {
         // int double, char, byte
 
         String a = "";
+        int b = 5;
+        // /way later on
+
     }
 }

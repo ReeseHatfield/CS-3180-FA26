@@ -6,6 +6,7 @@ class Cache {
         Integer b = 100;
         System.out.println(a == b);
 
+        // -128 - +127
         Integer x = 200;
         Integer y = 200;
         System.out.println(x == y);

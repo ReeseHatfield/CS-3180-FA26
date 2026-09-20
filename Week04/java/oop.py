@@ -20,3 +20,26 @@ s.__dict__["secret_key"] = "hello world"
 Student.__dict__["go_to_class"](s)
 
 print(s.secret_key)
+
+
+print()
+print()
+print()
+print()
+
+
+def add(a, b):
+    return a + b
+
+
+def mult(a, b):
+    return a * b
+	 
+
+def perform_operation(fn, a, b):
+    return fn(a, b)
+
+
+result = perform_operation(mult, 5, 6)
+
+print(result)

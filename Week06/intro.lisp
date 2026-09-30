@@ -1,5 +1,6 @@
 (format t "How old are you?~%")
 (finish-output)
+
 (defparameter *age* (read))
 
 (defun square (value)

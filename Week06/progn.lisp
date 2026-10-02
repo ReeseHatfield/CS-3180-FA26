@@ -21,13 +21,46 @@
 	        ((>= score 70) (format t "...~%")         "C")
 	        (t             (format t ":(~%")          "F")))
 
-(format t "~S~%" (get-letter-grade 39))
+
+; (format t "~S~%" (get-letter-grade 39))
 
 
 (defun my-sqrt (value)
     (unless (< value 0)
         (format t "square rooting the number")
         (sqrt value)))
+
+
+(defun main ()
+	(let ((grade (get-letter-grade 98)) 
+			(name "Reese"))
+		(format t "Your name was: ~S~%" name)
+		(format t "Your grade was: ~S~%" grade)))
+
+
+(defun factorial (value) 
+	(if (<= value 1)
+		1
+		(* value (factorial (- value 1)))))
+
+(defun get-penultimate (s)
+	(let ((cur (car s)))
+		(if (null (cdr (cdr s)))
+			cur
+			(get-penultimate (cdr s)))))
+
+(format t "Value was: ~S~%" (get-penultimate '(ALICE BOB CHARLIE DEREK)))
+
+(format t "Output was: ~S~%" 
+	(flet 
+		((double (value)
+			(* value 2))
+		(square (value)
+			(* value value)))
+		(double (square 2))))
+
+
+; (main)
 
 ; (format t "~S~%" (my-sqrt 64))
 
